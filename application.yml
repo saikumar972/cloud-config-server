@@ -1,0 +1,18 @@
+eureka:
+  Client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+microservice:
+  quote-service:
+    endpoints:
+      endpoint:
+        uri: http://quote-service/quote
+  stock-service:
+    endpoints:
+      endpoint:
+        uri: hhtp://stock-service/stock/getstock  
